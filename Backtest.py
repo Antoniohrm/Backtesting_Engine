@@ -34,6 +34,7 @@ def test(prices, start, end, dt = (60 * 60)):
             amount = (price * portfolio[1])
         portfolio = updatePortfolio(action, amount, price)
         res.append(portfolio)
+        t += tf
     
     Res = pd.DataFrame(res)
 
