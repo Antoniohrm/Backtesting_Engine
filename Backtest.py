@@ -30,12 +30,13 @@ def test(prices, start, end, dt = (60 * 60)):
         action, amount = strategy(price, portfolio)
         if (action == 1) and (portfolio[0] < amount):
             amount = portfolio[0]
-        else if (action == -1) and (portfolio[1] < (price * portfolio[1])):
+        elif (action == -1) and (portfolio[1] < (price * portfolio[1])):
             amount = (price * portfolio[1])
         portfolio = updatePortfolio(action, amount, price)
         res.append(portfolio)
         t += tf
     
     Res = pd.DataFrame(res)
+    ret = (portfolio[2] - 1000) / 10
 
-    return Res
+    return Res, ret
