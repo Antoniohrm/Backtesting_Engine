@@ -9,3 +9,4 @@ prices = prices[['open', 'high', 'low', 'close']]
 # Dates in [year, month, day, hour, minute] format
 start = [2022, 1, 1, 12, 0]
 end = [2022, 6, 1, 12, 0]
+dt = 3600
